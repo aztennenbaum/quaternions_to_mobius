@@ -1,9 +1,0 @@
-function J = crossratio_jacobian(a,b,c,d)
-% CROSSRATIO_JACOBIAN  Holomorphic partials wrt a,b,c,d.
-% Usage: J = crossratio_jacobian(a,b,c,d)
-z = crossratio(a,b,c,d);
-J = [z.*(1./(a-c)-1./(a-d)),...
-     z.*(1./(b-d)-1./(b-c)),...
-     z.*(1./(b-c)-1./(a-c)),...
-     z.*(1./(a-d)-1./(b-d))];
-end
